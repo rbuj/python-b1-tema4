@@ -47,23 +47,21 @@ Exemple:
 
 from abc import ABC, abstractmethod
 
-# Write abstract class Vehicles here 
-class Vehicles():
+
+class Vehicles(ABC):
+    @abstractmethod
     def drive(self):
-        # Write here your code
         pass
 
-# Corret and overwrite class Car(Vehicles) here 
-class Car():
-    def drive(self):
-        # Write here your code
-        pass
 
-# Corret and overwrite class Bicycle(Vehicles) here 
-class Bicycle():
+class Car(Vehicles):
     def drive(self):
-        # Write here your code
-        pass
+        return "Driving a car"
+
+
+class Bicycle(Vehicles):
+    def drive(self):
+        return "Riding a bicycle"
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script

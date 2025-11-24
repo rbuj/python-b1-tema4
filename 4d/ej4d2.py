@@ -37,8 +37,13 @@ Exemple:
 
 """
 def create_read_file():
-    # Write here your code
-    pass
+    with open('text_file.txt', 'w') as f:
+        f.write('Juan\n')
+        f.write('Pérez\n')
+        f.write('30\n')
+    with open('text_file.txt', 'r') as f:
+        for line in f.readlines():
+            print(line.strip())
 
 
 
